@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+
+		// 继承：extends
+		// 如果子类有自己constructor、使用super调用父类方法
+		
+		class People {
+			constructor (uname, age) {
+				this.uname = uname;
+				this.age = age;
+			}
+
+			say () {
+				console.log('说话');
+			}
+		}
+
+		// 明星类
+		class Star extends People {
+			constructor (uname, age, shuai) {
+				// super
+				super(uname, age);
+
+				this.shuai = shuai;
+			}
+			say () {
+				super.say();
+				console.log('123');
+			}
+		}
+
+		// 实例化
+		let s1 = new Star('刘德华', 23, '帅');
+
+		console.log(s1);
+
+
+		let s2 = new Star('周星驰', 21, '很帅');
+		console.log(s2);
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		// 构造函数的一个属性：prototype
+		function Person (uname, age) {
+			this.uname = uname;
+			this.age = age;
+		}
+
+		Person.prototype.say = function () {
+			console.log('say方法');
+		}
+
+		// console.log( Person.prototype );
+
+		// 在原型对象中，都有一个属性，constructor
+		// 这个属性用于指回构造函数本身
+		
+		// console.log( Person.prototype.constructor );
+
+
+		// 实例化对象
+		let obj = new Person('张三丰', 22);
+
+		console.log( obj );
+
+		// console.log( obj );
+		// obj.say();
+		
+
+
+
+		// function Dog () {}
+		// console.log( Dog.prototype.constructor );
+
+	</script>
+	
+</body>
+</html>

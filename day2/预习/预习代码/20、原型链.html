@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+	<script type="text/javascript">
+		
+		// 原型链：原型串联起来的链状结构
+		// 作用：提成查找成员的机制
+		// 构造函数
+		function Person (uname, age) {
+			this.uname = uname;
+			this.age = age;
+		}
+
+		// 原型对象：
+		Person.prototype.say = function () {
+			console.log('方法');
+		}
+
+		// 给Object的原型对象添加个方法
+		Object.prototype.lanqiu = function () {
+			console.log('Object篮球');
+		}
+
+		Person.prototype.lanqiu = function () {
+			console.log('Person篮球');
+		}
+
+
+
+		// 实例化
+		let obj = new Person('张三丰', 22);
+
+
+		obj.lanqiu = function () {
+			console.log( 'obj篮球' );
+		}
+		obj.lanqiu();
+		// console.log(obj);
+		// console.log( Person.prototype.__proto__.__proto__ );
+		// console.log( Object.prototype );
+
+
+		// console.log( obj.__proto__.__proto__.__proto__ );
+
+
+
+	</script>
+
+
+
+</body>
+</html>

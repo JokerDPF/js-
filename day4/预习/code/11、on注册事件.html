@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<input type="button" value="点击">
+	
+
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		
+		// $('input').on('事件类型', '后代元素', 函数);
+
+		$('input').on('click', function () {
+			console.log('内容');
+		});
+
+
+		$('input').on('mouseenter', function () {
+			console.log('mouseenter')
+		});
+
+
+		// 移除事件
+		// $('input').off('click');
+		$('input').off();// 移除所有事件
+	</script>
+
+</body>
+</html>

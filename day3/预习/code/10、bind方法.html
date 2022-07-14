@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+		
+		// call、apply
+		// bind：函数.bind(this, arg1, arg2......);
+		// bind：不会让函数执行，而是相当于返回了一个改变this之后的函数
+		
+		function fn (a, b) {
+			console.log(this, a, b);
+		}
+
+		let obj = {uname : '阿飞', age : 22}
+
+		// let re = fn.bind(obj);
+		// re()
+		fn.bind(obj, 123, 456)();
+
+
+
+	</script>
+
+
+</body>
+</html>

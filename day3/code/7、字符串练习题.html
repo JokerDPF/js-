@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+			
+
+
+		// let str = '我哎我的abcdskjgajdgasasmnsadna,mndasmdasdsa祖国，非常喜爱';
+
+		// // substring,substr
+		// let startIndex = str.indexOf('祖');
+		// let endIndex = str.indexOf('国');
+		// let re = str.substring(startIndex, endIndex+1);
+
+		// console.log(re);
+
+		let str = 'file:\\C:\\Users\\laogou\\Desktop\\JavaScript高级\\day3\\index.html';
+
+		// let dian = str.lastIndexOf('.');
+		let gang = str.lastIndexOf('\\');
+		// 截取：
+		// let wjm = str.substring(gang+1, dian);
+		// let hzm = str.substr(dian+1);
+		let last = str.substr(gang+1);
+		let arr = last.split('.');
+
+		console.log(arr);
+
+
+	</script>
+	
+</body>
+</html>

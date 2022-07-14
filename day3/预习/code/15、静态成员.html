@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+			
+		class Person {
+			// 实例成员：
+			head = 1;
+			legs = 2;
+			say () {
+				console.log('方法')
+			}
+			// 静态成员
+			static skin = 'yellow';
+			static languag = '汉语';
+			static eat () {
+				console.log('吃饭');
+			}
+		}
+
+		// 实例化
+		let obj = new Person();
+		// console.log( obj.head );
+		// obj.say();
+		
+		// console.log( Person.languag )
+		Person.eat();
+
+
+	</script>
+	
+</body>
+</html>

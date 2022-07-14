@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+
+
+
+
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		
+		// // first：查找第一个
+		// $('li').first().css('background', 'red');
+
+		// // last：查找最后一个
+		// $('li').last().css('background', 'yellow');
+
+		// eq：根据索引值筛选某个元素，jQuery
+		let index = 1;
+		$('li').eq(index).css('background', 'red');
+		// $('li:eq(1)').css('background', 'red');
+
+
+	</script>
+
+
+</body>
+</html>

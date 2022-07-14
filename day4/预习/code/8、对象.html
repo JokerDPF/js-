@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		
+	<div>哇哈哈</div>
+
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+
+		// 注意：DOM的只能使用DOM的方法、jQuery只能使用jQuery的方法
+		// 区分：
+			// DOM：用document.xxx获取的对象，都是DOM对象
+			// jQuery：用$获取的对象，都是jQuery对象
+		
+		// DOM
+		let od = document.querySelector('div');
+		// div.style.background = 'red';
+		// console.log(div);
+		// DOM==>jQuery
+		// $(DOM)
+		// $(od).css('background', 'blue');
+
+
+
+		// jQuery
+		console.log( $('div') );
+		// jQuery==>DOM
+		// $(jQuery)[索引值]
+		// $(jQuery ).get(索引值)
+		$('div').get(0).style.background = 'yellow';
+
+
+
+
+		// DOM：$(DOM对象)
+		// jQuery：$(jQ)[索引值]、$(jQ).get(索引值)
+
+	</script>
+</body>
+</html>

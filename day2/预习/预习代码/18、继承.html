@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+
+		// 继承
+		let people = {
+			head : 1,
+			legs : 2,
+			eyes : 2,
+			skin : 'yellow',
+		}
+
+
+		
+		function Chinese () {
+			this.language = 'chinese';
+		}
+
+		// 继承给原型
+		// console.log( Chinese.prototype );
+		Chinese.prototype = people;
+		// 再添加一个constructor
+		Chinese.prototype.constructor = Chinese;
+
+		console.log(Chinese.prototype)
+
+
+		let c1 = new Chinese();
+
+		// console.log( c1.head );
+		// console.log( c1.skin );
+		// console.log( c1.legs );
+
+
+
+		function Japanese () {
+			this.language = 'japanese';
+		}
+
+		Japanese.prototype = people;
+		Japanese.prototype.constructor = Japanese;
+
+		console.log( Japanese.prototype );
+
+		let obj = new Japanese();
+
+		// console.log( obj );
+		// console.log( obj.legs );
+		// console.log( obj.skin );
+
+
+
+
+
+
+
+		// let o1 = {uname : 'a', age : 22}
+		// o1 = {uname : 'b'};
+
+
+	</script>
+
+
+
+</body>
+</html>

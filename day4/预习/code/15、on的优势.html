@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3a</li>
+	</ul>
+	
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		
+		// $('li').click(function () {
+		// 	console.log('li');
+		// });
+
+		// // 动态创建li
+		// $('<li>新的li</li>').appendTo('ul');
+
+
+		// on：可以实现事件委托，事件委托的话，动态创建的元素也可以有事件
+		// 事件委派
+		$('ul').on('click', 'li', function () {
+			// this：当前事件源
+			console.log(this)
+		});
+
+		$('<li>新的li</li>').appendTo('ul');
+
+	</script>
+
+
+
+</body>
+</html>

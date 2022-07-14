@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+			
+		class Father {
+
+			constructor (uname, age) {
+				this.uname = uname;
+				this.age = age;
+			}
+			qian () {
+				console.log('赚他一个亿')
+			}
+
+		}
+
+
+		class Son extends Father {
+			// 如果子类有自己的constructor，必须通过super才可以调用父类的方法
+			// score：分数
+			constructor (uname, age, score) {
+				// 先调用父类
+				super(uname, age);
+
+				this.score = score;
+			}
+			qian () {
+				// 调用父类的方法
+				super.qian();
+				console.log('赚了两毛钱');
+			}
+		}
+
+		let sc = new Son('冲哥', 22, 99);
+		console.log(sc);
+		// 就近原则
+		sc.qian();
+
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+			
+		// function fn (a, b) {
+		// 	console.log(this, a, b);
+		// }
+
+		// let obj = {uname : '阿飞', age : 22}
+
+		// // call：
+		// fn.call(obj, 111, 222);
+
+
+		let obj = {
+			uname : '张三丰',
+			age : 22,
+			taiji :function () {
+				console.log(this);
+			}
+		}
+
+		let o = {uname : '李寻欢', age : 23};
+
+		// 函数.call
+		obj.taiji.call(o);
+
+		// 注意：什么时候会使用call
+		// 1、改变this的时候会使用call
+
+	</script>
+
+
+</body>
+</html>

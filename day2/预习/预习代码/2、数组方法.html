@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+		
+		// forEach：遍历数组
+		// [2, 6, 3, 7, 9, 4].forEach(function (item, index, o) {
+		// 	console.log( item, index, o );
+		// });
+
+		// find：返回数组中首次满足条件的元素
+		// let re = [2, 6, 3, 7, 9, 4].find( function (item, index, o) {
+		// 	// console.log(item, index, o);
+		// 	return item > 5;
+		// } );
+		// console.log( re );
+
+		// findIndex：返回数组中首次满足条件的元素的索引值
+		// let re = [2, 6, 3, 7, 9, 4].findIndex( function (item, index, o) {
+		// 	// console.log( item, index, o );
+		// 	return item > 5;
+		// } );
+		// console.log(re);
+
+		// some：查找满足条件的元素，有一个满足即为true，（满足条件立刻停止）
+		// let re = [2, 6, 3, 7, 9, 4].some( function (item, index, o) {
+		// 	return item > 5;
+		// } );
+		// console.log(re);
+
+		// every：查找满足条件的元素，都满足返回true，否则就是false
+		// let re = [2, 6, 3, 7, 9, 4].every( function (item, index, o) {
+		// 	return item > 1;
+		// } );
+		// console.log( re );
+
+		// filter：遍历筛选元素，把满足条件的元素筛选出来后放到新数组中返回
+		// let re = [2, 6, 3, 7, 9, 4].filter( function (item, index, o) {
+		// 	return item > 5;
+		// } );
+		// console.log( re );
+
+		// map：遍历元素，把每项执行一遍回调函数，把结果都放到一个新数组中返回
+		let re = [2, 6, 3, 7, 9, 4].map( function (item, index, o) {
+			return item * item;// [4, 36, 9...]
+		} );
+		console.log( re );
+
+
+
+	</script>
+
+
+</body>
+</html>

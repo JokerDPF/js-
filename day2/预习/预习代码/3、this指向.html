@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="button" value="点击">
+	
+	<script type="text/javascript">
+			
+		// console.log( this );
+
+		// 1、普通函数
+		// function fn () {
+		// 	console.log(this);// this指向调用者
+		// }
+		// window.fn();
+
+		// 2、构造函数：
+		// function Person (uname, age) {// 当前实例对象
+		// 	this.uname = uname;
+		// 	this.age = age;
+		// 	console.log(this);
+		// }
+
+		// let o1 = new Person('张三丰', 22);
+
+		// console.log(o1);
+
+
+		// let o2 = new Person('李寻欢', 22);
+
+		// console.log(o2);
+
+		// 3、方法
+		// let obj = {
+		// 	uname : '假冰冰',
+		// 	age : 22,
+		// 	eat :function () {
+		// 		console.log(this);// 方法里面的this指向调用者
+		// 	}
+		// }
+		// // obj.eat();
+
+		// let btn = document.querySelector('input');
+		// btn.onclick = obj.eat;
+
+		// 4、事件处理程序
+		// let btn = document.querySelector('input');
+		// btn.onclick = function () {
+		// 	console.log(this);// 当前事件源，调用者
+		// }
+		
+		// // 5、定时器
+		// window.setInterval(function () {
+		// 	console.log(this);// 调用者
+		// }, 1000);
+		
+		// 6、自执行函数
+		(function () {
+			console.log(this);//window、调用者
+		})();
+	</script>
+
+</body>
+</html>

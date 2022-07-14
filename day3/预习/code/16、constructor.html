@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+			
+		class Person {
+			head = 1;
+			legs = 2;
+			hand = 2;
+			// uname = '张三丰';
+			// age = 22;
+			// constructor：构造函数、构造方法、构造器
+			constructor (uname, age) {
+				// 构造方法在实例化的时候，就会默认执行
+				// 构造函数：用于接受参数，初始化操作
+				this.uname = uname;
+				this.age = age;
+			}
+
+			chang () {
+				console.log('唱歌');
+			}
+			tiao () {
+				console.log('跳舞');
+			}
+		}
+
+		// 实例化
+		let o1 = new Person('张三丰', 22);
+		console.log(o1);
+
+		let o2 = new Person('李寻欢', 23);
+		console.log(o2);
+	</script>
+
+	
+</body>
+</html>

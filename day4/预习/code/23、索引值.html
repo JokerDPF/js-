@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+			
+		// $('input')==>[inp, inp, inp, inp]
+		$('input').click(function () {
+			// index：方法
+			console.log( $(this).index() );
+
+		});
+
+		// 链式编程
+		// 排他思想
+		// 索引值
+
+
+	</script>
+</body>
+</html>

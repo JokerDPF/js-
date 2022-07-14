@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+			
+		// function fn (a, b, c) {
+		// 	console.log(this, a, b, c);
+		// }
+
+		// // 修改this指向
+		// // fn();
+		// // call：函数.call(this, arg1，arg2......);
+		// let obj = {uname : '阿飞', age : 22};
+		// //  函数调用call，call会函数执行，在执行的过程中改变this指向
+		// fn.call(obj, 1, 2, 3);
+
+
+		// call：用于继承
+		// let o = {
+		// 	uname : '李寻欢',
+		// 	age : 22,
+		// 	fei : function () {
+		// 		console.log(this)
+		// 	}
+		// }
+
+		// let a = {uname : '哇哈哈哈', color : 'red'};
+
+		// // o.fei();
+		// o.fei.call(a);
+
+		// 函数.call(this)
+
+
+		function Father (uname, age) {// new Father();
+			this.uname = uname;
+			this.age = age;
+		}
+
+		function Son (uname, age) {// new Son()
+			// Father(uname, age);
+			Father.call(this,uname, age);
+		}
+
+		// // 组合继承：构造函数写属性继承
+
+		let obj = new Son('儿子', 2);
+		console.log(obj);
+
+
+		
+
+	</script>
+
+
+</body>
+</html>

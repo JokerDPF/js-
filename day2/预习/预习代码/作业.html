@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		ul > li {
+			line-height: 40px;
+			width: 400px;
+			border-bottom: 2px dashed #ccc;
+		}
+
+		a {
+			float: right;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<h2>发布留言</h2>
+	<!-- cols：输入的列数row：行数 -->
+	<textarea id="txt" cols="60" rows="10"></textarea>
+	<input type="button" value="点击发布留言">
+	<ul>
+		<!-- li>asd<<a href="javascript">删除</a></li> -->
+	</ul>
+
+	<script type="text/javascript">
+
+		// 获取元素
+		let btn = document.querySelector('input');
+		let txt = document.getElementById('txt');
+		let ul = document.querySelector('ul');
+
+		// console.log( btn.nodeName );
+
+		// 监听事件
+		btn.addEventListener('click', function () {
+			// 获取内容
+			let val = txt.value;
+			// 创建
+			let li = document.createElement('li');
+			// 设置内容
+			li.innerHTML = `${val}<a href="javascript:;">删除</a>`;
+			// 放到ul中
+			ul.appendChild(li);
+			// 清空内容
+			txt.value = '';
+		});
+
+		// 获取a：添加点击事件
+		// 动态创建的元素不可以获取添加事件，应该用事件委托
+		// 把后代元素委托给上级元素注册
+		ul.addEventListener('click', function (e) {
+			// 找到a执行删除操作
+			// console.log( e.target.tagName );
+			if ( e.target.tagName.toLowerCase() == 'a' ) {
+
+				e.target.parentNode.remove();
+
+			}
+		});
+
+
+		
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+
+	<script type="text/javascript">
+		
+		// 原型
+		function Person (uname, age) {
+			this.uname = uname;
+			this.age = age;
+			// this.say = function () {}
+		}
+
+		// 每个构造函数都有一个属性，prototype
+		// Person.prototype==>指向了一个对象，我们把这个对象称为原型，原型对象
+		// 作用：保存方法，节省内存
+		// console.log( Person.prototype );
+
+		Person.prototype.say = function () {
+			console.log(this.uname + 'say方法');
+		}
+
+		Person.prototype.eat = function () {
+			console.log('吃饭');
+		}
+		console.log( Person.prototype );
+		
+		// 实例化
+		let obj = new Person('张三丰', 22);
+		console.log(obj);
+
+		// obj.say();
+
+
+		let obj1 = new Person('阿飞', 23);
+		// obj1.say();
+
+
+		// function Dog () {}
+
+		// console.log( Dog.prototype )
+
+
+		// 包装类型
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		// 解构赋值：
+			// 数组解构：let [变量] = [数据];一一对应
+			// 对象解构：let {变量} = {数据};属性名就是变量名，:可以替换名字
+		
+		// 面向对象：
+			// 字面量：let obj1 = {成员};
+			// 构造函数：let obj2 = new Object();
+			// 自定义构造函数：
+				// function Person () {}
+				// let obj3 = new Person();
+		
+		// 成员：
+			// 静态成员：构造函数身上直接添加的成员，称为静态成员，
+						// 只能由构造函数使用
+			// 实例成员：构造函数内部的成员，称为实例成员
+						// 只能由实例化对象使用
+		
+		// 基本类型和引用类型
+		
+		// 普通对象：new Object
+		// 数组对象：new Array
+			// 属性：length
+			// 方法：concat、join、indexOf、lastIndexOf、sort、
+					// Array.isArray、Array.from
+					// forEach：遍历
+		// 正则对象：new RegExp
+
+
+
+		let arr = ['张飞', '关羽', '马超', '赵云'];
+		// let a = arr[1];
+		// let b = arr[3];
+		let [, a, , b] = arr;
+
+		console.log(a ,b);
+
+
+		// let fn = () => {
+		// 	console.log(this);
+		// }
+	</script>
+	
+</body>
+</html>

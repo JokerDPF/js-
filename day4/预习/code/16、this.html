@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- <input type="button" value="点击"> -->
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+
+	
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+			
+		$('input').on('click', function () {
+			// console.log(this);
+			$(this).css('background', 'red');
+		});
+
+		$('ul').on('click', 'li', function () {
+			// console.log(this);
+			$(this).css('background', 'red');
+		});
+
+		
+
+	</script>
+</body>
+</html>

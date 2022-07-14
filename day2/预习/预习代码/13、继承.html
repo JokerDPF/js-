@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		class Father {
+			constructor (uname, age) {
+				this.uname = uname;
+				this.age = age;
+			}
+			say () {
+				console.log('say方法');
+			}
+		}
+		// 继承：extends：把一个类申明为子类
+		// 如果子类自己除了继承还有自己的constructor，只能通过super调用父类方法
+		// super：调用父类的方法
+		class Son extends Father {
+			constructor (uname, age, score) {
+				// 先调用父类的构造方法
+				super(uname, age);
+				// 设置自己成员
+				this.score = score;
+			}
+			say () {
+				super.say();
+				console.log('儿子的say方法');
+			}
+		}
+
+		// 实例化
+		let o = new Son('儿子', 6, 99);
+		console.log( o );
+		o.say();
+
+
+
+		// class Son {
+		// 	constructor (uname, age) {
+		// 		this.uname = uname;
+		// 		this.age = age;
+		// 	}
+		// 	say () {
+		// 		console.log('say方法');
+		// 	}
+		// }
+
+		// 继承
+
+
+	</script>
+	
+</body>
+</html>

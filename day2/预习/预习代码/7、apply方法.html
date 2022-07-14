@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+		
+		// function fn (a, b) {
+		// 	console.log(this, a, b);
+		// }
+
+		// let obj = {uname : '张飞', age :22};
+
+		// // apply：
+		// fn.apply(obj, [123, 456]);
+
+		// let obj = {
+		// 	uname :'阿飞',
+		// 	age : 22,
+		// 	fei :function () {
+		// 		console.log(this);
+		// 	}
+		// }
+
+		// let o = {uname : '关羽', age : 21};
+
+		// obj.fei.apply(o);
+
+		// 注意：apply；什么时候使用
+		// 1、改变this指向
+		// 2、如果操作数组的时候可能会用到这个方法
+		
+		let arr = [23, 66, 33, 4, 7, 9];
+
+		// Math.max();求若干个数的最大值
+		let re = Math.max.apply(null, arr);
+		
+		// ...rest：剩余参数，展开
+		// console.log( ...arr );
+
+		console.log(re);
+		
+
+
+		// let arr = [23, 66, 33, 4, 7, 9];
+
+		// let re = Math.max(...arr);
+
+		// console.log(re);
+	</script>
+
+
+</body>
+</html>

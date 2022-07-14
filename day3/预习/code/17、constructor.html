@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+	<script type="text/javascript">
+			
+		class Person {
+			head = 1;
+			// 成员
+			// 构造函数用于接受参数，初始化
+			// 在new的时候就会执行
+			constructor (uname, age) {
+				this.uname = uname;
+				this.age = age;
+			}
+
+			chang () {
+				console.log('唱歌');
+			}
+			tiao () {
+				console.log('跳舞');
+			}
+			rap () {
+				console.log('rap');
+			}
+		}
+
+		let obj = new Person('阿飞', 22);
+		console.log( obj );
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+			
+		let obj = {
+			uname : '张三丰',
+			age : 22,
+			sex : '男',
+		}
+
+		let newObj = obj;
+
+		// 注意：拷贝不是直接赋值
+		obj.uname = '阿飞';
+
+		console.log( obj, newObj );
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		let arr = [23, 55, 66];
+
+		
+		// console.log( arr );
+		// console.log( Array.prototype );
+		// 写一个数组的方法，任何数组都可以调用这个方法，
+		// 这个方法用于求数组的和
+		Array.prototype.sum = function () {
+			// 求和
+			let he = 0;
+			// 遍历
+			for (let i = 0; i < this.length; i++) {
+				he = he + this[i];
+			}
+			// 返回结果
+			return he;
+		}
+
+		// console.log( Array.prototype );
+		
+		console.log( arr.sum() );
+
+
+
+		let ary = [1, 2, 3];
+		console.log( ary.sum() );
+
+		let a = [11, 22, 33];
+		console.log( a.sum() );
+	</script>
+	
+</body>
+</html>

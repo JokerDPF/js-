@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		
+		// class Person {
+		// 	skin = 'yellow';
+		// 	// uname  = '123';
+		// 	// age = 123;
+
+		// 	constructor (uname, age) {// 构造函数
+		// 		this.uname = uname;
+		// 		this.age = age;
+		// 	}
+
+
+		// 	say () {}
+		// }
+
+		// let obj = new Person('李寻欢', 22);
+
+
+
+		// 深拷贝：
+		let a = {
+			uname : '阿飞',
+			age : 22,
+			sex : '男',
+			color : ['red', 'blue', 'yellow', 'pink'],
+			message : {
+				index : 6,
+				score : 66,
+			}
+		}
+		let  b = {};
+
+		// 递归：
+		function kaobei (newObj, obj) {
+
+			for (let key in obj) {
+				if ( obj[key] instanceof Array  ) {// obj[key]是数组
+					newObj[key] = [];
+
+					kaobei(newObj[key], obj[key])
+				} else if ( obj[key] instanceof Object ) {// obj[key]是对象
+					newObj[key] = {}
+
+					kaobei(newObj[key], obj[key])
+				} else {
+					newObj[key] = obj[key];
+				}
+			}
+
+		}
+
+
+		kaobei(b, a)
+
+	</script>
+
+
+</body>
+</html>

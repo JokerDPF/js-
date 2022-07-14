@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+		// 深拷贝：所有层都可以拷贝下来
+		let obj = {
+			uname : '张三丰',
+			age : 22,
+			sex : '男',
+			color : ['red', 'blue', 'pink', 'yellow'],
+			meesage : {
+				index : 1,
+				score : 99
+			}
+		}
+
+		let newObj = {};
+
+
+
+		function kaobei (newObj, obj) {
+			// 遍历
+			for (let key in obj) {
+				if ( obj[key] instanceof Array ) { // obj[key] 是数组
+					// obj[key]是数组
+					newObj[key] = [];
+
+					kaobei(newObj[key], obj[key]);
+				} else if (obj[key] instanceof Object) {// obj[key] 是对象
+					// obj[key]再遍历拷贝
+					newObj[key] = {}
+
+					kaobei(newObj[key], obj[key]);
+				} else {
+					newObj[key] = obj[key];
+				}
+			}
+
+			console.log( obj, newObj );
+		}
+
+		kaobei(newObj, obj);
+
+		// obj.meesage.score = 100;
+
+		
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="button" value="点击">
+	
+	<script type="text/javascript">
+		
+		// 箭头函数中认为没有this，使用的是上级this（函数所在区域的this）
+
+		// document.querySelector('input').onclick = () => {
+		// 	console.log(this);
+		// }
+
+		// let fn = function (uname, age) {
+		// 	this.uname = uname;
+		// 	this.age = age;
+		// }
+
+		// console.log( new fn(1, 2) );
+
+		let fn = () => {
+			this.uname = 1;
+			this.age = 2
+		}
+
+		console.log( new fn() );
+		
+
+	</script>
+
+
+</body>
+</html>

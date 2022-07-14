@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	
+		input {
+			width : 150px;
+			height : 40px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<input type="button" value="点击发送验证码">
+
+	<script type="text/javascript">
+
+		// 获取元素
+		let btn = document.querySelector('input');
+
+		// 监听事件
+		btn.addEventListener('click', function () {
+			// 让元素禁用
+			this.disabled = true;
+			// 定时器
+			window.setTimeout(function () {
+				// 启用按钮
+				this.disabled = false;
+			}.bind(this), 5000);
+
+		});
+
+		// 总结：
+			// call：函数.call(this, arg1, arg2......);
+			// apply：函数.apply(this, [arg1, arg2......]);
+			// bind：函数.bind(this, arg1, arg2......);
+		
+		// 相同点：
+			// 都可以改变this指向
+		
+		// 不同点：
+			// call，apply：都会立刻执行函数，call参数若干个，apply参数数组
+			// bind：不会立刻执行函数，而是相当于返回一个改变this的函数
+
+		
+		// 函数.bind(this, arg1, arg2......);
+		// function fn (a, b) {
+		// 	console.log(this, a, b);
+		// }
+		// let obj = {uname :'阿飞', age : 22};
+
+		// fn.bind(obj, 123, 456)();
+
+		// let re = fn.bind(obj);
+
+		// re();
+
+
+		// 注意：bind，用于既想要改变this的指向，但是又不希望立刻执行函数
+
+	</script>
+
+</body>
+</html>

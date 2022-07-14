@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="box">
+		<p>段落1</p>
+		<!-- <div>123</div> -->
+		<p>段落2</p>
+	</div>
+
+	<p>段落3</p>
+
+
+	<div>
+		<span>1</span>
+		<span>2</span>
+	</div>
+	
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		
+		// 第二个子，是p元素
+		// $('p:nth-child(2)').css('background', 'red');
+		$('#box p:nth-child(3)').css('background', 'red');
+
+
+	</script>
+</body>
+</html>

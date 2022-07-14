@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		// 构造函数
+		function Person (uname, age) {
+			this.uname = uname;
+			this.age = age;
+		}
+		// 原型对象
+		Person.prototype.say = function () {
+			console.log('方法啊');
+		}
+		// 实例化对象
+		let obj = new Person('张三丰', 22);
+		// 每个对象都有一个属性，__proto__，非标准属性
+		// 作用：用于指向原型对象，当对象查找成员找不到的时候，
+		// 就会沿着__proto__的指向继续查找
+		console.log( obj.__proto__ );
+
+		console.log( obj.__proto__ === Person.prototype )
+
+		// obj.say();
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

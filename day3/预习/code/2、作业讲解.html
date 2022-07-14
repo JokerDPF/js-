@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+			
+
+		// let arr = [
+		//     	[23, 66, 33, 16],
+		//     	[19, 21, 49, 66, 123, 36],
+		//     	[78, 37, 89, 86]
+		// ]
+
+
+		// 求该数组的平均值，最大值，最小值
+		
+		// 平均值
+		// 总和 / 总个数
+		// let sum = 0;
+		// let count = 0;
+		// // 遍历
+		// for (let i = 0; i < arr.length; i++) {
+		// 	// arr[i]：是小数组
+		// 	for (let j = 0; j < arr[i].length; j++) {
+		// 		sum = sum + arr[i][j];
+		// 		count++;
+		// 	}
+		// }
+		// // 平均值
+		// let avg = sum / count;
+		// console.log(avg);
+
+		// let arr = [
+		//     	[23, 66, 33, 16],
+		//     	[19, 21, 49, 66, 123, 36],
+		//     	[78, 37, 89, 86]
+		// ]
+
+		// // 最大值
+		// // 假设最大值
+		// let max = arr[0][0];
+
+		// for (let j = 0; j < arr.length; j++) {
+		// 	// arr[j]：是小数组
+		// 	for (let k = 0; k < arr[j].length; k++) {
+		// 		if (max < arr[j][k]) {
+		// 			max = arr[j][k]
+		// 		}
+		// 	}
+		// }
+
+		// console.log(max);
+		
+
+		let str = '132642343739373635384628633124';
+		// 求这个字符串里面出现最多的字符是哪个，出现了几次
+		// 理解：
+		// 既要知道哪个字符出现的最多，也要知道出现了几次
+		// 把字符当做对象的键，把次数当做键的值，
+		// 如果对象有这个键，就让值+1，如果没有这个键，就给对象添加个键
+		let obj = {};
+		// 遍历字符串
+		for (let i = 0; i < str.length; i++) {
+			// str[i]代表每个字符
+			// 判断
+			if ( obj[str[i]] ) {
+				obj[str[i]]++;
+			} else {
+				obj[str[i]] = 1;
+			}
+		}
+		console.log( obj );
+		// 求最大值
+		let max = 1;
+		let count = obj[1];
+
+		// 遍历对象
+		for ( let key in obj ) {
+			if ( count < obj[key] ) {
+				count = obj[key];
+				max = key;
+			}
+		}
+
+		console.log( max, count );
+
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求平均值
+        // let arr = [
+        //     [23, 66, 33, 16],
+        //     [19, 21, 49, 66, 123, 36],
+        //     [78, 37, 89, 86]
+        // ]
+        // let sum = 0;
+        // let count = 0;
+        // for (let i = 0; i < arr.length; i++) {
+        //     for(let j = 0; j < arr[i].length; j++) {
+        //         sum = arr[i][j] + sum
+        //         count++
+        //     }
+        //  }
+        // let avg = sum / count
+        // console.log(avg)
+
+        // 求二维数组最大值
+        let arr = [
+            [23, 66, 33, 16],
+            [19, 21, 49, 66, 123, 36],
+            [78, 37, 89, 86]
+        ]
+        let max = arr[0][0]
+        for (let i = 0; i < arr.length; i++) {
+            for(let j = 0; j < arr[i].length; j++) {
+                if(max < arr[i][j]) {
+                    max = arr[i][j]
+                }
+            }
+         }
+         console.log(max)
+    </script>
+</body>
+
+</html>

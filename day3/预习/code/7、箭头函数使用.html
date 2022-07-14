@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		// 箭头函数不允许当做构造函数的使用
+		// let Person = (uname, age) => {
+		// 	this.uname = uname;
+		// 	this.age = age;
+		// }
+
+		// let obj = new Person('张三丰', 22);
+
+		// console.log(obj);
+
+		// function Person () {}
+
+		// 默认：普通函数，window
+		(function () {
+			console.log(this);
+		})();
+	</script>
+
+</body>
+</html>

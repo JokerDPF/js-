@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+			
+
+		// function fn (a, b) {
+		// 	console.log(this, a, b);
+		// }
+
+		// let obj = {uname : '李寻欢', age : 2};
+
+		// // apply：
+		// // 函数：函数.apply(this, [数组])
+
+		// fn.apply(obj, [111, 222]);
+
+
+		// let obj = {
+		// 	uname : '张三丰',
+		// 	age : 123,
+		// 	taiji : function () {
+		// 		console.log(this);
+		// 	}
+		// }
+
+		// let a = {uname : '张无忌', age : 16};
+
+		// // obj.taiji();
+		// obj.taiji.apply(a);
+		
+
+
+		// apply：数组
+		let arr = [23, 66, 33, 4, 8, 9, 7];
+
+		// 如果不改变this指向就用null代替
+		let re = Math.max.apply(null, arr);
+		console.log(re);
+
+		// 扩展：...扩展运算符、rest参数
+		// let re = Math.max(...arr);
+		// console.log(re);
+		
+		let obj = new Object();
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+	<input type="button" value="点击">
+	
+
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		
+		$('input').on('click', function () {
+			// 排他：
+			// 1、先给当前元素添加
+			// $(this).css('background', 'red');
+
+			// 2、再给兄弟元素清除
+			// $(this).siblings().css('background', '');
+			
+			$(this).css('background', 'blue').siblings().css('background', '');
+
+			
+			// 方法：siblings：用于获取兄弟元素
+			// $(this).siblings().css('background', 'blue');
+
+
+		});
+
+
+
+	</script>
+	
+</body>
+</html>

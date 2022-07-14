@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		let arr = [
+					{id : 1, pname : '苹果', price : '9999'},
+					{id : 2, pname : '三星', price : '666'},
+					{id : 3, pname : '华为', price : '6666'}
+				]
+
+		// let re = arr.filter( function (item, index, o ) {
+		// 	return item.id == 1;
+		// } );
+
+		// console.log( re );
+
+		let newArr = [];
+
+		arr.forEach( function (item, index, o ) {
+			// if ( item.id == 1 ) newArr.push(item);
+			return item.id == 1
+		} );
+
+		console.log( newArr );
+		
+	</script>
+	
+</body>
+</html>

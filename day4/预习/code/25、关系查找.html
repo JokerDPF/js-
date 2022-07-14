@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- <div id="box">
+		<p>段落1</p>
+		<span>span1</span>
+		<div>
+			<p>段落2</p>
+		</div>
+	</div> -->
+	
+	<div id="box">
+		<div class="c1">
+			<div class="c2">
+				<div class="c3">哇哈哈</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+		
+		// console.log( $('#box').children('p') );
+		// children：子集
+		// $('#box').children('p').css('background', 'red');
+		
+		// find：后代
+		// $('#box').find('p').css('background', 'blue');
+
+		// parent：父级
+		// console.log( $('.c3').parent().parent().parent().parent().parent().parent().parent() );
+		
+		// parents：上级元素
+		console.log( $('.c3').parents('#box') );
+	</script>
+
+
+	
+</body>
+</html>

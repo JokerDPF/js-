@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+		
+		// 姓名、年龄、性别、身高、体重
+		// 模板：构造函数
+		function Person (uname, age, sex, height, weight) {
+			this.head = 1;
+			this.legs = 2;
+			this.language = 'chinese';
+
+			this.uname = uname;
+			this.age = age;
+			this.sex = sex;
+			this.height = height;
+			this.weight = weight;
+
+			// 方法
+			this.say = function () {
+				console.log(this.uname + '说话');
+			};
+			this.eat = function () {
+				console.log('吃饭');
+			}
+		}
+
+		// 实例化
+		let o1 = new Person('阿飞', 22, '男', '188cm', '88kg');
+		o1.uname = '飞飞';
+		// console.log(o1);
+
+		o1.say();
+
+
+		let o2 = new Person('小花', 21, '女', '168cm', '68kg');
+		// console.log(o2);
+
+		o2.say();
+
+
+	</script>
+
+
+</body>
+</html>

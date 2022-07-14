@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+	<script type="text/javascript">
+		
+
+
+		// let str = '我爱我asdsakjdsakjdhsad的祖aabbcc国哇哈哈';
+
+		// // 截取字符串
+		// // 查找位置
+		// let start = str.indexOf('祖');
+		// let end = str.indexOf('国');
+
+		// // console.log(start);
+		// // let re = str.substr(start, 2);
+		// let re = str.substring(start, end+1)
+
+		// console.log( re );
+
+
+		let str = 'C:\\Users\\laogou\\Desktop\\132期前端就业班\\JavaScript高级\\day3\\index.html';
+
+		// 找在最后一个斜杠的位置
+		let gang = str.lastIndexOf('\\');
+
+		// 找最后一个点的位置
+		let dian = str.lastIndexOf('.');
+
+		// 截取字符串
+		// let wjm = str.substring(gang+1, dian);
+		// let hzm = str.substr(dian + 1);
+		
+		// 截取
+		let last = str.substring(gang+1);
+		// 分割字符串
+		let arr = last.split('.')
+
+		console.log(arr);
+
+	</script>
+
+
+
+</body>
+</html>

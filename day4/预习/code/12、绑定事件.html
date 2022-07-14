@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<input type="button" value="点击">
+	
+
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript">
+			
+		$('input').bind('click', function () {
+			console.log('内容');
+		});
+
+		$('input').bind('mouseenter', function () {
+			console.log('enter');
+		});
+
+		// 移除事件
+		// $('input').unbind('click');
+		$('input').unbind();// 移除所有事件
+
+
+
+	</script>
+
+	
+</body>
+</html>

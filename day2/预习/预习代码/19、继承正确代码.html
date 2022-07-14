@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+	<script type="text/javascript">
+		// 公共构造函数
+		function People () {
+			this.head = 1;
+			this.legs = 2;
+			this.eyes = 2;
+
+			this.skin = 'yellow';
+		}
+
+		// console.log( new People() );
+		
+
+		function Chinese () {
+			this.language = 'chiinese';
+		}
+		// 1、把实例对象赋值给原型对象
+		Chinese.prototype = new People();
+		// 2、指回构造函数本身
+		Chinese.prototype.constructor = Chinese;
+
+		let obj1 = new Chinese();
+		console.log(obj1);
+
+
+		function Japanese () {
+			this.language = 'japanese';
+		}
+
+		Japanese.prototype = new People();
+		Japanese.prototype.constructor = Japanese;
+
+		let j1 = new Japanese();
+		console.log(j1);
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>

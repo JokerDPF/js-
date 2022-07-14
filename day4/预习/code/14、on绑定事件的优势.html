@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<input type="button" value="点击">
+
+	
+	<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+		
+	<script type="text/javascript">
+			
+		// $('input').click(function () {
+		// 	console.log('点击');
+		// });
+
+		// $('input').mouseenter(function () {
+		// 	console.log('enter');
+		// });
+
+		// $('input').mouseleave(function () {
+		// 	console.log('leave');
+		// });
+
+
+		// on： 1、同时绑定多个事件
+		// $('input').on({
+		// 	click : function () {
+		// 		console.log(1);
+		// 	},
+
+		// 	mouseenter : function () {
+		// 		console.log(2);
+		// 	},
+
+		// 	mouseleave : function () {
+		// 		console.log(3);
+		// 	}
+		// });
+
+		// 如果多个事件函数相同，那么可以简写
+		$('input').on('click mouseenter mouseleave', function () {
+			console.log('同事件函数');
+		});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+			
+		// function Person (uname, age) {
+		// 	this.uname = uname;
+		// 	this.age = age;
+		// 	// this.say = function () {}
+		// }
+
+		// // 原型对象
+		// Person.prototype.say = function () {
+		// 	console.log('方法');
+		// }
+
+		// // 实例对象
+		// let obj = new Person('阿飞', 23);
+
+
+
+		function Person () {
+			this.head = 1;
+			this.legs = 2;
+			this.language = '汉语';
+			this.say = function () {console.log('方法');}
+		}
+
+		// new Person()
+		function Chinese (uname, age) {
+			this.uname = uname;
+			this.age = age;
+		}
+
+		// 原型对象
+		Chinese.prototype = new Person();
+		Chinese.prototype.constructor = Chinese;
+
+		let obj = new Chinese('阿飞', 123);
+
+		console.log(obj);
+
+
+	</script>
+	
+</body>
+</html>

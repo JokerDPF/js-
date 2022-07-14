@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		input {
+			width: 100px;
+			height: 40px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	
+	<input type="button" value="发送验证码">
+	
+
+
+	<script type="text/javascript">
+		
+		// 获取元素
+		let btn = document.querySelector('input');
+
+		btn.addEventListener('click', function () {
+			// 禁用按钮
+			this.disabled = true;
+			// 启用定时器
+			window.setTimeout(function () {
+				this.disabled = false;
+			}.bind(this), 5000);
+		});
+
+
+		// function () {}.call()
+
+	</script>
+
+	
+</body>
+</html>
